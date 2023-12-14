@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="branch_view_form" model="ir.ui.view">
+        <field name="name">branch.view.form</field>
+        <field name="model">branch.branch</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="branch"/>
+                            <field name="branch_categories"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="branch_view_list" model="ir.ui.view">
+        <field name="name">branch.view.list</field>
+        <field name="model">branch.branch</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="branch"/>
+                <field name="branch_categories"/>
+
+            </tree>
+        </field>
+    </record>
+    <record id="branch_view_action" model="ir.actions.act_window">
+        <field name="name">Branch</field>
+        <field name="res_model">branch.branch</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
